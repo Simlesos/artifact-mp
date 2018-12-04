@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="container">
+  <scroll-view
+    class="main"
+    scroll-x="false"
+    scroll-y="true"
+  >
+    <block wx:for="{{cardMap}}" wx:key="{{item.type}}">
+      <view
+        class="card card__{{item.type}}"
+        data-type="{{item.type}}"
+        bindtap="onGotoCardList"
+      >
+        {{ item.name }}
+      </view>  
+    </block>
+  </scroll-view>
+</view>

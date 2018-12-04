@@ -1,0 +1,28 @@
+<view class="container">
+  <scroll-view class="main" scroll-y="true">
+    <view class="heros" wx:if="{{cardList.hero.length > 0}}">
+      <view class="type__title">英雄</view>
+        <view class="card__list" wx:for="{{cardList.hero}}"  wx:key="{{item.card_id}}">
+          <view class="hero card card__{{type}}" data-id="{{item.card_id}}" bindtap="onCardTap">
+            <image class="card__mini_image" mode="widthFix" src="{{item.mini_image.default}}" lazy-load="true"/>
+            <view class="card__name">{{item.card_name}}</view>
+          </view>
+        </view>
+    </view>
+    <view class="other">
+      <view class="type__title" wx:if="{{cardList.hero.length > 0}}" >其他</view>
+      <view class="card__list" wx:for="{{cardList.other}}" wx:key="{{item.card_id}}">
+          <view class="card card__{{type}}" data-id="{{item.card_id}}" bindtap="onCardTap">
+            <image class="card__mini_image" mode="widthFix" src="{{item.mini_image.default}}" lazy-load="true"/>
+            <image class="card__type_img" src="{{item.$card_type_img}}"></image>
+            <view class="card_mana_cost">{{item.mana_cost || item.gold_cost}}</view>
+            <view class="card__name">{{item.card_name}}</view>
+          </view>
+        </view>
+    </view>
+  </scroll-view>
+  <view class="card__dialog" hidden="{{ !currentCardUrl }}" bindtap="onDialogClick">
+    <image class="card__detail" src="{{currentCardUrl}}" mode="widthFix" lazy-load="true" />
+  </view>
+    
+</view>

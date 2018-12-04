@@ -1,0 +1,89 @@
+.container {
+  height: 100%;
+}
+.main {
+  flex: 1;
+  background: #0E0E16;
+  display: flex;
+  flex-direction: column;
+}
+
+.other {
+  padding-bottom: 64rpx;
+}
+
+.type__title {
+  color: #fff;
+  font-size: 60rpx;
+  font-family: "Radiance", sans-serif;
+  font-weight: 700;
+  padding: 20rpx 10rpx;
+}
+
+.card__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  height: 120rpx;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Radiance", sans-serif;
+}
+.card__red {
+  background: url(https://steamcdn-a.akamaihd.net/apps/artifact/images/deck_art/card_list_bg_red.png) no-repeat center center/100% 100%;
+}
+.card__blue {
+  background: url(https://steamcdn-a.akamaihd.net/apps/artifact/images/deck_art/card_list_bg_blue.png) no-repeat center center/100% 100%;
+}
+.card__green {
+  background: url(https://steamcdn-a.akamaihd.net/apps/artifact/images/deck_art/card_list_bg_green.png) no-repeat center center/100% 100%;
+}
+.card__black {
+  background: url(https://steamcdn-a.akamaihd.net/apps/artifact/images/deck_art/card_list_bg_black.png) no-repeat center center/100% 100%;
+}
+.card__item {
+  background: url(https://steamcdn-a.akamaihd.net/apps/artifact/images/deck_art/card_list_bg_item.png) no-repeat center center/100% 100%;
+}
+
+.card__mini_image {
+  display: block;
+  width: 120rpx;
+}
+
+.card__type_img {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.card_mana_cost {
+  color: #cccccc;
+  font-size: 36rpx;
+  margin-left: 12rpx;
+}
+
+.card__name {
+  color: #cccccc;
+  font-size: 36rpx;
+  margin-left: 42rpx;
+}
+
+.card__dialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .5);
+}
+
+.card__detail {
+  font-size: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* box-shadow: 0 0 100rpx #000; */
+}
